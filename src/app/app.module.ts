@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-import { MatDialogModule} from '@angular/material';
+import { MatCheckboxModule, MatDialogModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -24,6 +24,7 @@ import { LeaderService } from './services/leaders.service';
 import { PromotionService } from './services/promotion.service';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,8 +47,12 @@ import { LoginComponent } from './login/login.component';
     MatButtonModule,
     MatListModule,
     AppRoutingModule,
-    MatDialogModule
-  ],
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    FormsModule
+    ],
   providers: [
     DishService,
     PromotionService,
