@@ -16,10 +16,11 @@ export class DishService {
   }
 
   getDish(id: string): Promise<Dish> {
-    return new Promise(resolve=> {
-      // Simulate server latency with 2 second delay
-        setTimeout(() => resolve(DISHES.filter((dish) => (dish.id === id))[0]), 2000);
+    return new Promise (resolve => {
+      // simulate server latency with 2 sec delay
+      setTimeout(() => resolve(DISHES.filter((dish) => (dish.id === id))[0]), 2000);
     });
+
   }
 
   getFeaturedDish(): Promise<Dish> {
